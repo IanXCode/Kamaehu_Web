@@ -1,26 +1,578 @@
 @import "tailwindcss";
 
+/* Kamaehu Gym Brand Colors */
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  /* Primary Brand */
+  --primary: #F97316;
+  --primary-hover: #EA580C;
+  --secondary: #EF4444;
+  --accent: #F59E0B;
+
+  /* Light Mode */
+  --background: #FFFFFF;
+  --background-secondary: #FFF7ED;
+  --foreground: #1C1917;
+  --foreground-muted: #78716C;
+
+  /* Semantic */
+  --success: #22C55E;
+  --warning: #EAB308;
+  --error: #EF4444;
+
+  /* Macros */
+  --protein: #3B82F6;
+  --carbs: #22C55E;
+  --fat: #F59E0B;
+
+  /* Trophy */
+  --trophy: #FFD700;
+}
+
+/* Island Night Dark Mode */
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #0B1622;
+    --background-secondary: #0F1D2E;
+    --foreground: #F8FAFC;
+    --foreground-muted: #94A3B8;
+
+    /* Dark mode ocean colors */
+    --ocean-mid: #132A3E;
+    --lagoon: #1A3A4F;
+    --teal: #1E4D5C;
+    --moonlight: #3D7A8C;
+    --starlight: #B8D4DC;
+  }
 }
 
 @theme inline {
+  --color-primary: var(--primary);
+  --color-primary-hover: var(--primary-hover);
+  --color-secondary: var(--secondary);
+  --color-accent: var(--accent);
   --color-background: var(--background);
+  --color-background-secondary: var(--background-secondary);
   --color-foreground: var(--foreground);
+  --color-foreground-muted: var(--foreground-muted);
+  --color-success: var(--success);
+  --color-protein: var(--protein);
+  --color-carbs: var(--carbs);
+  --color-fat: var(--fat);
+  --color-trophy: var(--trophy);
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
 }
 
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: var(--font-sans), system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+}
+
+/* Gradient backgrounds */
+.gradient-sunset {
+  background: linear-gradient(135deg, #F97316 0%, #EF4444 50%, #F59E0B 100%);
+}
+
+.gradient-hero {
+  background: linear-gradient(180deg, #FFF7ED 0%, #FFFFFF 100%);
+}
+
+@media (prefers-color-scheme: dark) {
+  .gradient-hero {
+    background: linear-gradient(180deg, #0F1D2E 0%, #0B1622 100%);
+  }
+}
+
+.gradient-text {
+  background: linear-gradient(135deg, #F97316 0%, #EF4444 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* Animations */
+@keyframes float {
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(-10px); }
+}
+
+@keyframes pulse-glow {
+  0%, 100% { box-shadow: 0 0 20px rgba(249, 115, 22, 0.3); }
+  50% { box-shadow: 0 0 40px rgba(249, 115, 22, 0.6); }
+}
+
+@keyframes slide-up {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fade-in {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+.animate-float {
+  animation: float 3s ease-in-out infinite;
+}
+
+.animate-pulse-glow {
+  animation: pulse-glow 2s ease-in-out infinite;
+}
+
+.animate-slide-up {
+  animation: slide-up 0.6s ease-out forwards;
+}
+
+.animate-fade-in {
+  animation: fade-in 0.5s ease-out forwards;
+}
+
+/* Stagger children animations */
+.stagger-children > * {
+  opacity: 0;
+  animation: slide-up 0.5s ease-out forwards;
+}
+
+.stagger-children > *:nth-child(1) { animation-delay: 0.1s; }
+.stagger-children > *:nth-child(2) { animation-delay: 0.2s; }
+.stagger-children > *:nth-child(3) { animation-delay: 0.3s; }
+.stagger-children > *:nth-child(4) { animation-delay: 0.4s; }
+.stagger-children > *:nth-child(5) { animation-delay: 0.5s; }
+
+/* Glass effect */
+.glass {
+  background: rgba(255, 255, 255, 0.8);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+}
+
+@media (prefers-color-scheme: dark) {
+  .glass {
+    background: rgba(11, 22, 34, 0.8);
+  }
+}
+
+/* Card hover effects */
+.card-hover {
+  transition: all 0.3s ease;
+}
+
+.card-hover:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 20px 40px rgba(249, 115, 22, 0.15);
+}
+
+/* Button styles */
+.btn-primary {
+  background: linear-gradient(135deg, #F97316 0%, #EA580C 100%);
+  color: white;
+  padding: 0.75rem 2rem;
+  border-radius: 9999px;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+}
+
+.btn-primary:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 30px rgba(249, 115, 22, 0.4);
+}
+
+.btn-secondary {
+  background: transparent;
+  color: var(--foreground);
+  padding: 0.75rem 2rem;
+  border-radius: 9999px;
+  font-weight: 600;
+  border: 2px solid var(--primary);
+  transition: all 0.3s ease;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+}
+
+.btn-secondary:hover {
+  background: var(--primary);
+  color: white;
+}
+
+/* Section spacing */
+.section {
+  padding: 5rem 1.5rem;
+}
+
+@media (min-width: 768px) {
+  .section {
+    padding: 7rem 2rem;
+  }
+}
+
+/* Feature card */
+.feature-card {
+  background: var(--background);
+  border: 1px solid rgba(249, 115, 22, 0.1);
+  border-radius: 1rem;
+  padding: 2rem;
+  transition: all 0.3s ease;
+}
+
+.feature-card:hover {
+  border-color: rgba(249, 115, 22, 0.3);
+  box-shadow: 0 10px 40px rgba(249, 115, 22, 0.1);
+}
+
+@media (prefers-color-scheme: dark) {
+  .feature-card {
+    background: var(--background-secondary);
+    border-color: rgba(249, 115, 22, 0.2);
+  }
+}
+
+/* Progress ring animation */
+.progress-ring {
+  transform: rotate(-90deg);
+}
+
+/* Scrollbar styling */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--background-secondary);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--primary);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--primary-hover);
+}
+
+/* ============================================
+   TRIBAL ISLANDER ANIMATIONS & ORGANIC MOTION
+   ============================================ */
+
+/* Wave animations - flowing like ocean waves */
+@keyframes wave-slow {
+  0%, 100% { transform: translateX(0) translateY(0); }
+  25% { transform: translateX(-2%) translateY(5px); }
+  50% { transform: translateX(0) translateY(10px); }
+  75% { transform: translateX(2%) translateY(5px); }
+}
+
+@keyframes wave-medium {
+  0%, 100% { transform: translateX(0) translateY(0); }
+  25% { transform: translateX(3%) translateY(-8px); }
+  50% { transform: translateX(0) translateY(-15px); }
+  75% { transform: translateX(-3%) translateY(-8px); }
+}
+
+@keyframes wave-fast {
+  0%, 100% { transform: translateX(0) translateY(0); }
+  25% { transform: translateX(-4%) translateY(12px); }
+  50% { transform: translateX(0) translateY(20px); }
+  75% { transform: translateX(4%) translateY(12px); }
+}
+
+.animate-wave-slow {
+  animation: wave-slow 8s ease-in-out infinite;
+}
+
+.animate-wave-medium {
+  animation: wave-medium 6s ease-in-out infinite;
+}
+
+.animate-wave-fast {
+  animation: wave-fast 4s ease-in-out infinite;
+}
+
+/* Organic blob animations */
+@keyframes blob {
+  0%, 100% {
+    transform: scale(1) translate(0, 0);
+    border-radius: 40% 60% 70% 30% / 40% 50% 60% 50%;
+  }
+  25% {
+    transform: scale(1.05) translate(10px, -10px);
+    border-radius: 70% 30% 50% 50% / 30% 30% 70% 70%;
+  }
+  50% {
+    transform: scale(0.95) translate(-5px, 10px);
+    border-radius: 50% 60% 30% 60% / 50% 50% 50% 50%;
+  }
+  75% {
+    transform: scale(1.02) translate(-10px, -5px);
+    border-radius: 30% 60% 70% 40% / 50% 60% 30% 60%;
+  }
+}
+
+.animate-blob {
+  animation: blob 10s ease-in-out infinite;
+}
+
+.animate-blob-delay {
+  animation: blob 12s ease-in-out infinite;
+  animation-delay: -5s;
+}
+
+/* Slow spin for tribal patterns */
+@keyframes spin-slow {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+@keyframes spin-reverse {
+  from { transform: rotate(360deg); }
+  to { transform: rotate(0deg); }
+}
+
+.animate-spin-slow {
+  animation: spin-slow 30s linear infinite;
+}
+
+.animate-spin-reverse {
+  animation: spin-reverse 25s linear infinite;
+}
+
+/* Sway animation - like palm trees */
+@keyframes sway {
+  0%, 100% { transform: rotate(-3deg); }
+  50% { transform: rotate(3deg); }
+}
+
+.animate-sway {
+  animation: sway 4s ease-in-out infinite;
+  transform-origin: bottom center;
+}
+
+/* Ripple effect */
+@keyframes ripple {
+  0% {
+    transform: scale(0.8);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(2);
+    opacity: 0;
+  }
+}
+
+.animate-ripple {
+  animation: ripple 2s ease-out infinite;
+}
+
+/* Tribal pulse - like heartbeat of the island */
+@keyframes tribal-pulse {
+  0%, 100% {
+    transform: scale(1);
+    opacity: 0.8;
+  }
+  50% {
+    transform: scale(1.1);
+    opacity: 1;
+  }
+}
+
+.animate-tribal-pulse {
+  animation: tribal-pulse 3s ease-in-out infinite;
+}
+
+/* Organic reveal animation */
+@keyframes organic-reveal {
+  from {
+    opacity: 0;
+    transform: translateY(40px) scale(0.95);
+    filter: blur(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+    filter: blur(0);
+  }
+}
+
+.animate-organic-reveal {
+  animation: organic-reveal 0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+/* Flowing gradient animation */
+@keyframes gradient-flow {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+.animate-gradient-flow {
+  background-size: 200% 200%;
+  animation: gradient-flow 5s ease infinite;
+}
+
+/* ============================================
+   TRIBAL DESIGN ELEMENTS
+   ============================================ */
+
+/* Organic card with wave border */
+.tribal-card {
+  position: relative;
+  background: var(--background);
+  border-radius: 1.5rem;
+  padding: 2rem;
+  overflow: hidden;
+}
+
+.tribal-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background: linear-gradient(90deg, #F97316, #EF4444, #F59E0B, #F97316);
+  background-size: 200% 100%;
+  animation: gradient-flow 3s ease infinite;
+}
+
+@media (prefers-color-scheme: dark) {
+  .tribal-card {
+    background: var(--background-secondary);
+  }
+}
+
+/* Wave divider */
+.wave-divider {
+  position: relative;
+  height: 80px;
+  overflow: hidden;
+}
+
+.wave-divider svg {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 100%;
+}
+
+/* Tribal icon container */
+.tribal-icon {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.tribal-icon::after {
+  content: '';
+  position: absolute;
+  inset: -4px;
+  border-radius: 50%;
+  border: 2px dashed currentColor;
+  opacity: 0.3;
+  animation: spin-slow 20s linear infinite;
+}
+
+/* Organic section backgrounds */
+.section-organic {
+  position: relative;
+  overflow: hidden;
+}
+
+.section-organic::before {
+  content: '';
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: radial-gradient(ellipse at center, rgba(249, 115, 22, 0.05) 0%, transparent 70%);
+  animation: blob 20s ease-in-out infinite;
+  pointer-events: none;
+}
+
+/* Flowing underline */
+.flowing-underline {
+  position: relative;
+  display: inline-block;
+}
+
+.flowing-underline::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: -4px;
+  width: 100%;
+  height: 3px;
+  background: linear-gradient(90deg, #F97316, #EF4444);
+  border-radius: 2px;
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.flowing-underline:hover::after {
+  transform: scaleX(1);
+}
+
+/* Island-inspired button */
+.btn-island {
+  position: relative;
+  background: linear-gradient(135deg, #F97316 0%, #EF4444 50%, #F59E0B 100%);
+  background-size: 200% 200%;
+  color: white;
+  padding: 1rem 2.5rem;
+  border-radius: 2rem;
+  font-weight: 600;
+  border: none;
+  overflow: hidden;
+  transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.btn-island::before {
+  content: '';
+  position: absolute;
+  inset: 2px;
+  background: inherit;
+  border-radius: inherit;
+  filter: blur(15px);
+  opacity: 0;
+  transition: opacity 0.4s;
+  z-index: -1;
+}
+
+.btn-island:hover {
+  transform: translateY(-3px) scale(1.02);
+  background-position: 100% 0;
+}
+
+.btn-island:hover::before {
+  opacity: 0.6;
+}
+
+/* Tribal pattern overlay (for sections) */
+.tribal-pattern {
+  background-image: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M30 5 L35 15 L30 25 L25 15 Z' fill='none' stroke='%23F97316' stroke-width='0.5' opacity='0.1'/%3E%3Ccircle cx='30' cy='30' r='8' fill='none' stroke='%23F97316' stroke-width='0.5' opacity='0.1'/%3E%3C/svg%3E");
+}
+
+/* Smooth scroll behavior */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Selection color */
+::selection {
+  background: rgba(249, 115, 22, 0.3);
+  color: var(--foreground);
 }

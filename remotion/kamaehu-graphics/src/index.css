@@ -1,0 +1,35 @@
+/* Kamaehu Brand Colors */
+:root {
+  /* Primary Brand */
+  --primary: #F97316;
+  --primary-hover: #EA580C;
+  --secondary: #EF4444;
+  --accent: #F59E0B;
+
+  /* Backgrounds */
+  --background: #FFFFFF;
+  --background-secondary: #FFF7ED;
+  --foreground: #1C1917;
+  --foreground-muted: #78716C;
+
+  /* Semantic */
+  --success: #22C55E;
+  --protein: #3B82F6;
+  --carbs: #22C55E;
+  --fat: #F59E0B;
+  --trophy: #FFD700;
+
+  /* Island Night (dark) */
+  --ocean-deep: #0B1622;
+  --ocean-mid: #132A3E;
+  --lagoon: #1A3A4F;
+  --teal: #1E4D5C;
+  --moonlight: #3D7A8C;
+  --starlight: #B8D4DC;
+}
+
+body {
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+  margin: 0;
+  padding: 0;
+}
