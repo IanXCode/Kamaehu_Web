@@ -1,8 +1,9 @@
 import Header from "@/components/Header";
 import Hero from "@/components/Hero";
+import AIFoodLog from "@/components/AIFoodLog";
 import Features from "@/components/Features";
-import HowItWorks from "@/components/HowItWorks";
-import Community from "@/components/Community";
+import ComparisonTable from "@/components/ComparisonTable";
+import BuiltByLifter from "@/components/BuiltByLifter";
 import Download from "@/components/Download";
 import Footer from "@/components/Footer";
 
@@ -12,9 +13,10 @@ export default function Home() {
       <Header />
       <main className="flex-1">
         <Hero />
+        <AIFoodLog />
         <Features />
-        <HowItWorks />
-        <Community />
+        <ComparisonTable />
+        <BuiltByLifter />
         <Download />
       </main>
       <Footer />

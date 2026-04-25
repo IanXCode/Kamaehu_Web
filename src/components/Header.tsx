@@ -15,7 +15,7 @@ export default function Header() {
           <Link href="/" className="flex items-center gap-2">
             <Image
               src="/logo-text.png"
-              alt="Kamaehu Gym"
+              alt="Kamaehu"
               width={140}
               height={40}
               className="h-8 w-auto"
@@ -26,25 +26,31 @@ export default function Header() {
           {/* Desktop Navigation */}
           <div className="hidden md:flex items-center gap-8">
             <Link
+              href="#ai-food-log"
+              className="text-foreground-muted hover:text-primary transition-colors font-medium"
+            >
+              AI Food Log
+            </Link>
+            <Link
               href="#features"
               className="text-foreground-muted hover:text-primary transition-colors font-medium"
             >
               Features
             </Link>
             <Link
-              href="#how-it-works"
+              href="#comparison"
               className="text-foreground-muted hover:text-primary transition-colors font-medium"
             >
-              How It Works
+              Compare
             </Link>
             <Link
-              href="#community"
+              href="#about"
               className="text-foreground-muted hover:text-primary transition-colors font-medium"
             >
-              Community
+              About
             </Link>
             <Link href="#download" className="btn-primary text-sm">
-              Download App
+              Try Free
             </Link>
           </div>
 
@@ -84,6 +90,13 @@ export default function Header() {
           <div className="md:hidden py-4 border-t border-primary/10">
             <div className="flex flex-col gap-4">
               <Link
+                href="#ai-food-log"
+                className="text-foreground-muted hover:text-primary transition-colors font-medium"
+                onClick={() => setMobileMenuOpen(false)}
+              >
+                AI Food Log
+              </Link>
+              <Link
                 href="#features"
                 className="text-foreground-muted hover:text-primary transition-colors font-medium"
                 onClick={() => setMobileMenuOpen(false)}
@@ -91,25 +104,25 @@ export default function Header() {
                 Features
               </Link>
               <Link
-                href="#how-it-works"
+                href="#comparison"
                 className="text-foreground-muted hover:text-primary transition-colors font-medium"
                 onClick={() => setMobileMenuOpen(false)}
               >
-                How It Works
+                Compare
               </Link>
               <Link
-                href="#community"
+                href="#about"
                 className="text-foreground-muted hover:text-primary transition-colors font-medium"
                 onClick={() => setMobileMenuOpen(false)}
               >
-                Community
+                About
               </Link>
               <Link
                 href="#download"
                 className="btn-primary text-sm w-fit"
                 onClick={() => setMobileMenuOpen(false)}
               >
-                Download App
+                Try Free
               </Link>
             </div>
           </div>

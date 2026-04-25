@@ -21,20 +21,34 @@ export const viewport: Viewport = {
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://kamaehugym.com"),
-  title: "Kamaehu Gym | Your Gym Family",
+  title: "Kamaehu | AI Food Logging That Actually Understands Asian Cuisine",
   description:
-    "The fitness + wellness + social platform that helps you achieve sustainable progress. Track workouts, log nutrition, and connect with your gym family. No crash diets, no burnout.",
+    "Finally, an AI that understands soto ayam, nasi padang, and pho. Component-level macro breakdowns, adaptive metabolism tracking, and research-backed nutrition — built by a lifter, for lifters.",
   keywords: [
-    "fitness app",
+    // Primary value props
+    "AI food logging",
+    "Asian food macro tracker",
+    "Indonesian food nutrition app",
+    "soto ayam calories",
+    "nasi padang macros",
+    // Features
+    "adaptive metabolism tracking",
+    "TDEE calculator app",
+    "macro tracking app",
+    "workout and nutrition app",
+    "fitness app for lifters",
+    // Indonesian market
+    "aplikasi nutrisi Indonesia",
+    "aplikasi kalori makanan Indonesia",
+    "aplikasi fitness Indonesia",
+    "hitung kalori makanan Indonesia",
+    // General fitness
     "workout tracker",
+    "gym app",
     "nutrition logging",
-    "macro tracking",
-    "gym community",
-    "workout planner",
-    "meal planning",
-    "fitness social network",
-    "personal records",
-    "metabolism tracking",
+    "meal tracking app",
+    "protein tracking",
+    "bodybuilding app",
   ],
   authors: [{ name: "Kamaehu" }],
   creator: "Kamaehu",
@@ -42,24 +56,24 @@ export const metadata: Metadata = {
     type: "website",
     locale: "en_US",
     url: "https://kamaehugym.com",
-    siteName: "Kamaehu Gym",
-    title: "Kamaehu Gym | Your Gym Family",
+    siteName: "Kamaehu",
+    title: "Kamaehu | AI That Finally Understands Your Food",
     description:
-      "The fitness + wellness + social platform for sustainable progress. Track workouts, log nutrition, and connect with your gym family.",
+      "Log soto ayam, nasi padang, or pho — and get accurate macros with component-level breakdowns. Plus adaptive metabolism tracking and honest coaching.",
     images: [
       {
         url: "/og-image.png",
         width: 1200,
         height: 630,
-        alt: "Kamaehu Gym - Your Gym Family",
+        alt: "Kamaehu - AI Food Logging for Asian Cuisine",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Kamaehu Gym | Your Gym Family",
+    title: "Kamaehu | AI That Finally Understands Your Food",
     description:
-      "The fitness + wellness + social platform for sustainable progress.",
+      "Log soto ayam, nasi padang, or pho — and get accurate macros. Built by a lifter, for lifters.",
     images: ["/og-image.png"],
   },
   icons: {
@@ -67,6 +81,12 @@ export const metadata: Metadata = {
     apple: "/icon.png",
   },
   manifest: "/manifest.json",
+  alternates: {
+    languages: {
+      "en": "https://kamaehugym.com",
+      "id": "https://kamaehugym.com/id",
+    },
+  },
 };
 
 export default function RootLayout({
@@ -79,6 +99,34 @@ export default function RootLayout({
       lang="en"
       className={`${geistSans.variable} ${geistMono.variable} h-full antialiased scroll-smooth`}
     >
+      <head>
+        {/* Structured data for app */}
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              "@context": "https://schema.org",
+              "@type": "MobileApplication",
+              "name": "Kamaehu",
+              "operatingSystem": "iOS",
+              "applicationCategory": "HealthApplication",
+              "description": "AI-powered food logging that understands Asian and Indonesian cuisine. Adaptive metabolism tracking and workout logging for serious lifters.",
+              "offers": {
+                "@type": "Offer",
+                "price": "0",
+                "priceCurrency": "USD"
+              },
+              "aggregateRating": {
+                "@type": "AggregateRating",
+                "ratingValue": "5",
+                "ratingCount": "1",
+                "bestRating": "5",
+                "worstRating": "1"
+              }
+            }),
+          }}
+        />
+      </head>
       <body className="min-h-full flex flex-col">{children}</body>
     </html>
   );

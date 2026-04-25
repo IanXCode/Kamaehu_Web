@@ -1,0 +1,105 @@
+{
+  "meta": {
+    "title": "Kamaehu | AI yang Paham Makanan Indonesia",
+    "description": "Akhirnya, AI yang mengerti soto ayam, nasi padang, dan rendang. Hitung kalori dengan detail per komponen, pelacakan metabolisme adaptif, dan nutrisi berbasis riset."
+  },
+  "hero": {
+    "badge": "Pelacakan Nutrisi Berbasis AI",
+    "headline": "Akhirnya, AI yang",
+    "headlineHighlight": "paham makanan kamu",
+    "subheadline": "Log soto ayam, nasi padang, atau rendang — dapat makro akurat dengan rincian per komponen. Bukan tebakan. Pemahaman nyata.",
+    "subheadline2": "Plus pelacakan metabolisme adaptif, target protein berbasis riset, dan log workout — semua dalam satu aplikasi yang dibuat oleh lifter, untuk lifter.",
+    "cta": "Coba Gratis di iOS",
+    "ctaSecondary": "Lihat Cara Kerjanya",
+    "badges": {
+      "asianCuisine": "AI Makanan Indonesia",
+      "reasoning": "Tunjukkan Alasannya",
+      "metabolism": "Pelajari Metabolisme Kamu"
+    }
+  },
+  "aiFoodLog": {
+    "badge": "AI Food Logging",
+    "headline": "Bukan cuma tebakan kalori.",
+    "headlineHighlight": "Sebuah percakapan.",
+    "description": "Kebanyakan AI makanan cuma kasih angka dan selesai. Punya kita tunjukkan prosesnya, bisa kamu koreksi, dan benar-benar paham makanan yang kamu makan.",
+    "features": {
+      "componentBreakdown": {
+        "title": "Rincian Per Komponen",
+        "description": "Lihat persis bagaimana AI menghitung makananmu — ayam, mie, sambal, bawang goreng — setiap item dengan makronya sendiri. Bukan total hitam."
+      },
+      "reasoning": {
+        "title": "Panel Alasan AI",
+        "description": "AI jelaskan logikanya: \"Terdeteksi soto ayam dengan bihun. Tambah sambal berdasarkan condiment yang terlihat.\" Kepercayaan melalui transparansi."
+      },
+      "refinement": {
+        "title": "Perbaikan Percakapan",
+        "description": "\"Sebenarnya, aku tambah nasi\" — ketik saja. AI menyesuaikan perkiraan tanpa mulai dari awal. Ulangi sampai benar."
+      },
+      "cookingOil": {
+        "title": "Prompt Minyak Goreng",
+        "description": "Sumber #1 kurang logging. AI kita tanya \"Tambah minyak goreng?\" saat mendeteksi makanan goreng — menangkap kalori yang kebanyakan aplikasi lewatkan."
+      },
+      "validation": {
+        "title": "Lapisan Validasi Otomatis",
+        "description": "Sebelum menampilkan hasil, AI cek makro yang jelas salah — seperti 500g protein dalam salad. Menangkap error sebelum masuk log."
+      },
+      "asianFoods": {
+        "title": "Makanan Indonesia & Asia",
+        "description": "Soto ayam, goi cuon, nasi padang, pho, rendang — dikenali dengan akurasi budaya. Kecap manis, sambal, bawang goreng dipahami secara native."
+      }
+    },
+    "contrast": {
+      "others": "Aplikasi lain:",
+      "othersDescription": "Scan barcode → dapat angka → berharap benar.",
+      "kamaehu": "Kamaehu:",
+      "kamaehuDescription": "Deskripsikan atau foto makananmu → lihat rinciannya → perbaiki sampai akurat."
+    }
+  },
+  "features": {
+    "badge": "Fitur Berbasis Sains",
+    "headline": "Dibangun berdasarkan riset,",
+    "headlineHighlight": "bukan feeling",
+    "description": "Setiap algoritma mengutip sumbernya. Setiap rekomendasi punya alasan. Kita tidak menebak — kita menghitung, mengukur, dan beradaptasi.",
+    "citationFooter": "Target protein berdasarkan Morton et al. 2018, Helms et al. 2014, Schoenfeld & Aragon 2018"
+  },
+  "comparison": {
+    "badge": "Perbandingan",
+    "headline": "Yang bikin Kamaehu",
+    "headlineHighlight": "berbeda",
+    "description": "Kita bangun aplikasi yang kita tidak bisa temukan. Ini artinya.",
+    "footer": "Perbandingan berdasarkan fitur publik dari aplikasi fitness dan nutrisi populer. Kita tidak sebut nama — kita cuma bangun apa yang mereka tidak punya."
+  },
+  "founder": {
+    "badge": "Tentang Founder",
+    "headline": "Dibuat oleh lifter,",
+    "headlineHighlight": "bukan korporasi",
+    "description": "Kamaehu bukan produk yang didesain oleh komite. Ini aplikasi yang saya bangun karena saya butuhkan — dan tidak bisa temukan di tempat lain.",
+    "quote": "Saya capek dengan aplikasi yang tidak paham makanan yang saya makan, yang pakai trik psikologi untuk bikin saya cemas, dan yang terasa dibuat oleh orang yang tidak pernah masuk gym. Jadi saya bangun Kamaehu.",
+    "founderName": "Ian",
+    "founderTitle": "Founder & solo developer",
+    "testimonialPlaceholder": "Testimoni pengguna segera hadir — kita masih beta"
+  },
+  "download": {
+    "badge": "iOS Beta via TestFlight",
+    "headline": "Coba Kamaehu",
+    "headlineHighlight": "gratis",
+    "description": "Log makanan pertamamu dengan AI kita. Lihat rincian komponennya. Dapat target kalori adaptifmu. Semua gratis selama beta.",
+    "cta": "Apple TestFlight",
+    "ctaSubtext": "Download gratis di",
+    "androidNotice": "Versi Android segera hadir. Daftar untuk update di bawah.",
+    "androidCta": "Beritahu Saya",
+    "androidPlaceholder": "Masukkan email kamu",
+    "benefits": {
+      "free": "Gratis selama beta",
+      "ai": "Full AI food logging",
+      "fitness": "Workout + nutrisi"
+    }
+  },
+  "nav": {
+    "aiFoodLog": "AI Food Log",
+    "features": "Fitur",
+    "compare": "Bandingkan",
+    "about": "Tentang",
+    "tryFree": "Coba Gratis"
+  }
+}

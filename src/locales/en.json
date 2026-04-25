@@ -1,0 +1,105 @@
+{
+  "meta": {
+    "title": "Kamaehu | AI Food Logging That Actually Understands Asian Cuisine",
+    "description": "Finally, an AI that understands soto ayam, nasi padang, and pho. Component-level macro breakdowns, adaptive metabolism tracking, and research-backed nutrition."
+  },
+  "hero": {
+    "badge": "AI-Powered Nutrition Tracking",
+    "headline": "Finally, an AI that",
+    "headlineHighlight": "understands your food",
+    "subheadline": "Log soto ayam, nasi padang, or pho — and get accurate macros with component-level breakdowns. Not guesses. Real understanding.",
+    "subheadline2": "Plus adaptive metabolism tracking, research-backed protein targets, and workout logging — all in one app built by a lifter, for lifters.",
+    "cta": "Try Free on iOS",
+    "ctaSecondary": "See How It Works",
+    "badges": {
+      "asianCuisine": "Asian Cuisine AI",
+      "reasoning": "Shows Its Reasoning",
+      "metabolism": "Learns Your Metabolism"
+    }
+  },
+  "aiFoodLog": {
+    "badge": "AI Food Logging",
+    "headline": "Not just a calorie guess.",
+    "headlineHighlight": "A conversation.",
+    "description": "Most food AIs give you a number and call it done. Ours shows its work, lets you correct it, and actually understands the food you eat.",
+    "features": {
+      "componentBreakdown": {
+        "title": "Component-Level Breakdown",
+        "description": "See exactly how the AI calculated your meal — chicken, noodles, sambal, fried shallots — each item listed with its own macros. No black-box totals."
+      },
+      "reasoning": {
+        "title": "AI Reasoning Panel",
+        "description": "The AI explains its logic: \"Detected soto ayam with vermicelli noodles. Added sambal based on visible condiment.\" Trust through transparency."
+      },
+      "refinement": {
+        "title": "Conversational Refinement",
+        "description": "\"Actually, I had extra rice\" — just type it. The AI adjusts the estimate without starting over. Iterate until it's right."
+      },
+      "cookingOil": {
+        "title": "Cooking Oil Prompt",
+        "description": "The #1 source of under-logging. Our AI asks \"Add cooking oil?\" when it detects fried foods — catching the calories most apps miss."
+      },
+      "validation": {
+        "title": "Self-Validation Layer",
+        "description": "Before showing results, the AI checks for obviously wrong macros — like 500g protein in a salad. Catches errors before they hit your log."
+      },
+      "asianFoods": {
+        "title": "Asian & Indonesian Foods",
+        "description": "Soto ayam, goi cuon, nasi padang, pho, rendang — recognized with cultural accuracy. Kecap manis, sambal, bawang goreng understood natively."
+      }
+    },
+    "contrast": {
+      "others": "Other apps:",
+      "othersDescription": "Scan barcode → get a number → hope it's right.",
+      "kamaehu": "Kamaehu:",
+      "kamaehuDescription": "Describe or photo your meal → see the breakdown → refine until it's accurate."
+    }
+  },
+  "features": {
+    "badge": "Science-Backed Features",
+    "headline": "Built on research,",
+    "headlineHighlight": "not vibes",
+    "description": "Every algorithm cites its sources. Every recommendation has a reason. We don't guess — we calculate, measure, and adapt.",
+    "citationFooter": "Protein targets based on Morton et al. 2018, Helms et al. 2014, Schoenfeld & Aragon 2018"
+  },
+  "comparison": {
+    "badge": "How We Compare",
+    "headline": "What makes Kamaehu",
+    "headlineHighlight": "different",
+    "description": "We built the app we couldn't find. Here's what that means.",
+    "footer": "Comparison based on publicly available features of popular fitness and nutrition apps. We don't name names — we just built what they don't do."
+  },
+  "founder": {
+    "badge": "About the Founder",
+    "headline": "Built by a lifter,",
+    "headlineHighlight": "not a corporation",
+    "description": "Kamaehu isn't a product designed by committee. It's the app I built because I needed it — and couldn't find it anywhere else.",
+    "quote": "I got tired of apps that didn't understand the food I actually eat, that used psychology tricks to keep me anxious, and that felt designed by people who've never stepped inside a gym. So I built Kamaehu.",
+    "founderName": "Ian",
+    "founderTitle": "Founder & solo developer",
+    "testimonialPlaceholder": "User testimonials coming soon — we're still in beta"
+  },
+  "download": {
+    "badge": "iOS Beta via TestFlight",
+    "headline": "Try Kamaehu",
+    "headlineHighlight": "free",
+    "description": "Log your first meal with our AI. See the component breakdown. Get your adaptive calorie targets. All free during beta.",
+    "cta": "Apple TestFlight",
+    "ctaSubtext": "Download free on",
+    "androidNotice": "Android version coming soon. Sign up for updates below.",
+    "androidCta": "Notify Me",
+    "androidPlaceholder": "Enter your email",
+    "benefits": {
+      "free": "Free during beta",
+      "ai": "Full AI food logging",
+      "fitness": "Workout + nutrition"
+    }
+  },
+  "nav": {
+    "aiFoodLog": "AI Food Log",
+    "features": "Features",
+    "compare": "Compare",
+    "about": "About",
+    "tryFree": "Try Free"
+  }
+}
