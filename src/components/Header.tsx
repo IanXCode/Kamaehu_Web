@@ -24,12 +24,18 @@ export default function Header() {
           </Link>
 
           {/* Desktop Navigation */}
-          <div className="hidden md:flex items-center gap-8">
+          <div className="hidden md:flex items-center gap-6">
             <Link
               href="#ai-food-log"
               className="text-foreground-muted hover:text-primary transition-colors font-medium"
             >
-              AI Food Log
+              Nutrition
+            </Link>
+            <Link
+              href="#workout"
+              className="text-foreground-muted hover:text-primary transition-colors font-medium"
+            >
+              Workouts
             </Link>
             <Link
               href="#features"
@@ -42,12 +48,6 @@ export default function Header() {
               className="text-foreground-muted hover:text-primary transition-colors font-medium"
             >
               Compare
-            </Link>
-            <Link
-              href="#about"
-              className="text-foreground-muted hover:text-primary transition-colors font-medium"
-            >
-              About
             </Link>
             <Link href="#download" className="btn-primary text-sm">
               Try Free
@@ -94,7 +94,14 @@ export default function Header() {
                 className="text-foreground-muted hover:text-primary transition-colors font-medium"
                 onClick={() => setMobileMenuOpen(false)}
               >
-                AI Food Log
+                Nutrition
+              </Link>
+              <Link
+                href="#workout"
+                className="text-foreground-muted hover:text-primary transition-colors font-medium"
+                onClick={() => setMobileMenuOpen(false)}
+              >
+                Workouts
               </Link>
               <Link
                 href="#features"
@@ -109,13 +116,6 @@ export default function Header() {
                 onClick={() => setMobileMenuOpen(false)}
               >
                 Compare
-              </Link>
-              <Link
-                href="#about"
-                className="text-foreground-muted hover:text-primary transition-colors font-medium"
-                onClick={() => setMobileMenuOpen(false)}
-              >
-                About
               </Link>
               <Link
                 href="#download"

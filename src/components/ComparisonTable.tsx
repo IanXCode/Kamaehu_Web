@@ -1,66 +1,115 @@
 "use client";
 
 const comparisons = [
+  // Nutrition features
   {
     feature: "Asian & Indonesian food recognition",
     kamaehu: true,
     others: false,
     detail: "Soto ayam, nasi padang, pho, goi cuon",
+    category: "nutrition",
   },
   {
     feature: "Component-level meal breakdown",
     kamaehu: true,
     others: false,
     detail: "See each ingredient separately",
+    category: "nutrition",
   },
   {
     feature: "AI explains its reasoning",
     kamaehu: true,
     others: false,
     detail: "Transparency you can trust",
-  },
-  {
-    feature: "Conversational refinement",
-    kamaehu: true,
-    others: false,
-    detail: "\"Actually, I had less rice\"",
+    category: "nutrition",
   },
   {
     feature: "Catches cooking oil",
     kamaehu: true,
     others: false,
     detail: "The #1 source of under-logging",
+    category: "nutrition",
+  },
+  // Workout features
+  {
+    feature: "4 types of PR detection",
+    kamaehu: true,
+    others: false,
+    detail: "Weight, set volume, 1RM, session volume",
+    category: "workout",
   },
   {
-    feature: "Adaptive TDEE (learns your metabolism)",
+    feature: "Warmup vs working sets",
     kamaehu: true,
     others: "partial",
-    detail: "Not just a formula",
+    detail: "Excluded from PR/volume calculations",
+    category: "workout",
+  },
+  {
+    feature: "Dropsets, pyramids, failure sets",
+    kamaehu: true,
+    others: false,
+    detail: "Real training techniques tracked",
+    category: "workout",
+  },
+  {
+    feature: "Unilateral L/R tracking",
+    kamaehu: true,
+    others: false,
+    detail: "Track each side separately",
+    category: "workout",
+  },
+  {
+    feature: "Assisted reps handled correctly",
+    kamaehu: true,
+    others: false,
+    detail: "In volume, not in 1RM",
+    category: "workout",
+  },
+  {
+    feature: "6 different 1RM formulas",
+    kamaehu: true,
+    others: false,
+    detail: "Epley, Brzycki, Lombardi, etc.",
+    category: "workout",
+  },
+  // Engine features
+  {
+    feature: "Adaptive TDEE",
+    kamaehu: true,
+    others: "partial",
+    detail: "Learns your metabolism over time",
+    category: "engine",
   },
   {
     feature: "Research-cited protein targets",
     kamaehu: true,
     others: false,
     detail: "Morton, Helms, Schoenfeld",
+    category: "engine",
   },
+  // Philosophy
   {
     feature: "No anxiety-driving streaks",
     kamaehu: true,
     others: false,
     detail: "Calm, honest feedback",
-  },
-  {
-    feature: "Workout + nutrition integrated",
-    kamaehu: true,
-    others: "partial",
-    detail: "One app, full picture",
+    category: "philosophy",
   },
   {
     feature: "Built by a lifter who uses it daily",
     kamaehu: true,
     others: false,
     detail: "Dogfooded, not outsourced",
+    category: "philosophy",
   },
+];
+
+const categories = [
+  { key: "nutrition", label: "Nutrition AI" },
+  { key: "workout", label: "Workout Tracking" },
+  { key: "engine", label: "Metabolism Engine" },
+  { key: "philosophy", label: "Philosophy" },
 ];
 
 export default function ComparisonTable() {
@@ -136,41 +185,53 @@ export default function ComparisonTable() {
             </div>
           </div>
 
-          {/* Rows */}
-          {comparisons.map((row, index) => (
-            <div
-              key={index}
-              className={`grid grid-cols-[1fr,100px,100px] sm:grid-cols-[1fr,120px,120px] ${
-                index % 2 === 0 ? "bg-background" : "bg-background-secondary/50"
-              } ${index !== comparisons.length - 1 ? "border-b border-primary/5" : ""}`}
-            >
-              <div className="p-4 lg:p-5">
-                <div className="font-medium text-foreground text-sm sm:text-base">{row.feature}</div>
-                <div className="text-xs text-foreground-muted mt-0.5 hidden sm:block">{row.detail}</div>
+          {/* Rows grouped by category */}
+          {categories.map((category, catIndex) => (
+            <div key={category.key}>
+              {/* Category header */}
+              <div className="px-4 lg:px-6 py-2 bg-primary/5 border-b border-primary/10">
+                <span className="text-xs font-semibold text-primary uppercase tracking-wider">{category.label}</span>
               </div>
-              <div className="p-4 lg:p-5 flex items-center justify-center">
-                {row.kamaehu === true && (
-                  <div className="w-8 h-8 bg-green-500/20 rounded-full flex items-center justify-center">
-                    <svg className="w-5 h-5 text-green-500" fill="currentColor" viewBox="0 0 24 24">
-                      <path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/>
-                    </svg>
+
+              {/* Category rows */}
+              {comparisons
+                .filter((row) => row.category === category.key)
+                .map((row, index) => (
+                  <div
+                    key={index}
+                    className={`grid grid-cols-[1fr,100px,100px] sm:grid-cols-[1fr,120px,120px] ${
+                      index % 2 === 0 ? "bg-background" : "bg-background-secondary/30"
+                    } border-b border-primary/5`}
+                  >
+                    <div className="p-3 lg:p-4">
+                      <div className="font-medium text-foreground text-sm">{row.feature}</div>
+                      <div className="text-xs text-foreground-muted mt-0.5 hidden sm:block">{row.detail}</div>
+                    </div>
+                    <div className="p-3 lg:p-4 flex items-center justify-center">
+                      {row.kamaehu === true && (
+                        <div className="w-7 h-7 bg-green-500/20 rounded-full flex items-center justify-center">
+                          <svg className="w-4 h-4 text-green-500" fill="currentColor" viewBox="0 0 24 24">
+                            <path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/>
+                          </svg>
+                        </div>
+                      )}
+                    </div>
+                    <div className="p-3 lg:p-4 flex items-center justify-center">
+                      {row.others === false && (
+                        <div className="w-7 h-7 bg-red-500/10 rounded-full flex items-center justify-center">
+                          <svg className="w-4 h-4 text-red-400" fill="currentColor" viewBox="0 0 24 24">
+                            <path d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/>
+                          </svg>
+                        </div>
+                      )}
+                      {row.others === "partial" && (
+                        <div className="w-7 h-7 bg-yellow-500/20 rounded-full flex items-center justify-center">
+                          <span className="text-yellow-500 text-xs font-medium">~</span>
+                        </div>
+                      )}
+                    </div>
                   </div>
-                )}
-              </div>
-              <div className="p-4 lg:p-5 flex items-center justify-center">
-                {row.others === false && (
-                  <div className="w-8 h-8 bg-red-500/10 rounded-full flex items-center justify-center">
-                    <svg className="w-5 h-5 text-red-400" fill="currentColor" viewBox="0 0 24 24">
-                      <path d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/>
-                    </svg>
-                  </div>
-                )}
-                {row.others === "partial" && (
-                  <div className="w-8 h-8 bg-yellow-500/20 rounded-full flex items-center justify-center">
-                    <span className="text-yellow-500 text-sm font-medium">~</span>
-                  </div>
-                )}
-              </div>
+                ))}
             </div>
           ))}
         </div>
