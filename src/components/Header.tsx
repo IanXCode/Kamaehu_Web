@@ -49,6 +49,12 @@ export default function Header() {
             >
               Compare
             </Link>
+            <Link
+              href="/sign-in"
+              className="text-foreground-muted hover:text-primary transition-colors font-medium"
+            >
+              Sign In
+            </Link>
             <Link href="#download" className="btn-primary text-sm">
               Try Free
             </Link>
@@ -116,6 +122,13 @@ export default function Header() {
                 onClick={() => setMobileMenuOpen(false)}
               >
                 Compare
+              </Link>
+              <Link
+                href="/sign-in"
+                className="text-foreground-muted hover:text-primary transition-colors font-medium"
+                onClick={() => setMobileMenuOpen(false)}
+              >
+                Sign In
               </Link>
               <Link
                 href="#download"
