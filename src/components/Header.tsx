@@ -15,7 +15,7 @@ export default function Header() {
           <Link href="/" className="flex items-center gap-2">
             <Image
               src="/logo-text.png"
-              alt="Kamaehu"
+              alt="Kamaehu Gym"
               width={140}
               height={40}
               className="h-8 w-auto"

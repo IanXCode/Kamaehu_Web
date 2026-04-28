@@ -74,7 +74,7 @@ function SignInForm() {
             <div className="w-12 h-12 bg-gradient-to-br from-primary to-secondary rounded-xl flex items-center justify-center">
               <span className="text-white text-2xl font-bold">K</span>
             </div>
-            <span className="text-2xl font-bold gradient-text">Kamaehu</span>
+            <span className="text-2xl font-bold gradient-text">Kamaehu Gym</span>
           </Link>
         </div>
 
@@ -208,7 +208,7 @@ function SignInForm() {
             <p className="text-foreground-muted text-sm">
               Don&apos;t have the app yet?{' '}
               <Link href="/#download" className="text-primary hover:underline font-medium">
-                Download Kamaehu
+                Download Kamaehu Gym
               </Link>
             </p>
           </div>
@@ -240,7 +240,7 @@ function SignInLoading() {
             <div className="w-12 h-12 bg-gradient-to-br from-primary to-secondary rounded-xl flex items-center justify-center">
               <span className="text-white text-2xl font-bold">K</span>
             </div>
-            <span className="text-2xl font-bold gradient-text">Kamaehu</span>
+            <span className="text-2xl font-bold gradient-text">Kamaehu Gym</span>
           </div>
         </div>
         <div className="tribal-card shadow-xl flex items-center justify-center py-16">

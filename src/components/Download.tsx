@@ -61,7 +61,7 @@ export default function Download() {
 
         {/* Headline */}
         <h2 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold mb-6">
-          Try Kamaehu{" "}
+          Try Kamaehu Gym{" "}
           <span className="relative inline-block">
             <span className="gradient-text">free</span>
             <svg className="absolute -bottom-2 left-0 w-full h-4" viewBox="0 0 200 16" preserveAspectRatio="none">

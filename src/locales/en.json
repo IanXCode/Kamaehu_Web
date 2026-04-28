@@ -1,6 +1,6 @@
 {
   "meta": {
-    "title": "Kamaehu | AI Food Logging That Actually Understands Asian Cuisine",
+    "title": "Kamaehu Gym | AI Food Logging That Actually Understands Asian Cuisine",
     "description": "Finally, an AI that understands soto ayam, nasi padang, and pho. Component-level macro breakdowns, adaptive metabolism tracking, and research-backed nutrition."
   },
   "hero": {
@@ -64,7 +64,7 @@
   },
   "comparison": {
     "badge": "How We Compare",
-    "headline": "What makes Kamaehu",
+    "headline": "What makes Kamaehu Gym",
     "headlineHighlight": "different",
     "description": "We built the app we couldn't find. Here's what that means.",
     "footer": "Comparison based on publicly available features of popular fitness and nutrition apps. We don't name names — we just built what they don't do."
@@ -81,7 +81,7 @@
   },
   "download": {
     "badge": "iOS Beta via TestFlight",
-    "headline": "Try Kamaehu",
+    "headline": "Try Kamaehu Gym",
     "headlineHighlight": "free",
     "description": "Log your first meal with our AI. See the component breakdown. Get your adaptive calorie targets. All free during beta.",
     "cta": "Apple TestFlight",

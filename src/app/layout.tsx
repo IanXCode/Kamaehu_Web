@@ -21,7 +21,7 @@ export const viewport: Viewport = {
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://kamaehugym.com"),
-  title: "Kamaehu | AI Food Logging That Actually Understands Asian Cuisine",
+  title: "Kamaehu Gym | AI Food Logging That Actually Understands Asian Cuisine",
   description:
     "Finally, an AI that understands soto ayam, nasi padang, and pho. Component-level macro breakdowns, adaptive metabolism tracking, and research-backed nutrition — built by a lifter, for lifters.",
   keywords: [
@@ -50,14 +50,14 @@ export const metadata: Metadata = {
     "protein tracking",
     "bodybuilding app",
   ],
-  authors: [{ name: "Kamaehu" }],
-  creator: "Kamaehu",
+  authors: [{ name: "Kamaehu Gym" }],
+  creator: "Kamaehu Gym",
   openGraph: {
     type: "website",
     locale: "en_US",
     url: "https://kamaehugym.com",
-    siteName: "Kamaehu",
-    title: "Kamaehu | AI That Finally Understands Your Food",
+    siteName: "Kamaehu Gym",
+    title: "Kamaehu Gym | AI That Finally Understands Your Food",
     description:
       "Log soto ayam, nasi padang, or pho — and get accurate macros with component-level breakdowns. Plus adaptive metabolism tracking and honest coaching.",
     images: [
@@ -65,13 +65,13 @@ export const metadata: Metadata = {
         url: "/og-image.png",
         width: 1200,
         height: 630,
-        alt: "Kamaehu - AI Food Logging for Asian Cuisine",
+        alt: "Kamaehu Gym - AI Food Logging for Asian Cuisine",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Kamaehu | AI That Finally Understands Your Food",
+    title: "Kamaehu Gym | AI That Finally Understands Your Food",
     description:
       "Log soto ayam, nasi padang, or pho — and get accurate macros. Built by a lifter, for lifters.",
     images: ["/og-image.png"],
@@ -107,7 +107,7 @@ export default function RootLayout({
             __html: JSON.stringify({
               "@context": "https://schema.org",
               "@type": "MobileApplication",
-              "name": "Kamaehu",
+              "name": "Kamaehu Gym",
               "operatingSystem": "iOS",
               "applicationCategory": "HealthApplication",
               "description": "AI-powered food logging that understands Asian and Indonesian cuisine. Adaptive metabolism tracking and workout logging for serious lifters.",

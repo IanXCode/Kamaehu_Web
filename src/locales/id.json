@@ -1,6 +1,6 @@
 {
   "meta": {
-    "title": "Kamaehu | AI yang Paham Makanan Indonesia",
+    "title": "Kamaehu Gym | AI yang Paham Makanan Indonesia",
     "description": "Akhirnya, AI yang mengerti soto ayam, nasi padang, dan rendang. Hitung kalori dengan detail per komponen, pelacakan metabolisme adaptif, dan nutrisi berbasis riset."
   },
   "hero": {
@@ -64,7 +64,7 @@
   },
   "comparison": {
     "badge": "Perbandingan",
-    "headline": "Yang bikin Kamaehu",
+    "headline": "Yang bikin Kamaehu Gym",
     "headlineHighlight": "berbeda",
     "description": "Kita bangun aplikasi yang kita tidak bisa temukan. Ini artinya.",
     "footer": "Perbandingan berdasarkan fitur publik dari aplikasi fitness dan nutrisi populer. Kita tidak sebut nama — kita cuma bangun apa yang mereka tidak punya."
@@ -81,7 +81,7 @@
   },
   "download": {
     "badge": "iOS Beta via TestFlight",
-    "headline": "Coba Kamaehu",
+    "headline": "Coba Kamaehu Gym",
     "headlineHighlight": "gratis",
     "description": "Log makanan pertamamu dengan AI kita. Lihat rincian komponennya. Dapat target kalori adaptifmu. Semua gratis selama beta.",
     "cta": "Apple TestFlight",

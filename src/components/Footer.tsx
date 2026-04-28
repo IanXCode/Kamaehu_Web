@@ -150,7 +150,7 @@ export default function Footer() {
         {/* Bottom bar */}
         <div className="mt-12 pt-8 border-t border-primary/10 flex flex-col sm:flex-row justify-between items-center gap-4">
           <p className="text-sm text-foreground-muted">
-            © {new Date().getFullYear()} Kamaehu. All rights reserved.
+            © {new Date().getFullYear()} Kamaehu Gym. All rights reserved.
           </p>
           <div className="flex gap-6 text-sm text-foreground-muted">
             <Link href="/privacy" className="hover:text-primary transition-colors">

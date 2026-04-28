@@ -147,7 +147,7 @@ export default function ComparisonTable() {
             How We Compare
           </span>
           <h2 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold mt-4 mb-6">
-            What makes Kamaehu{" "}
+            What makes Kamaehu Gym{" "}
             <span className="relative inline-block">
               <span className="gradient-text">different</span>
               <svg className="absolute -bottom-2 left-0 w-full h-3" viewBox="0 0 200 12" preserveAspectRatio="none">
@@ -178,7 +178,7 @@ export default function ComparisonTable() {
           <div className="grid grid-cols-[1fr,100px,100px] sm:grid-cols-[1fr,120px,120px] bg-background-secondary border-b border-primary/10">
             <div className="p-4 lg:p-6 font-semibold text-foreground">Feature</div>
             <div className="p-4 lg:p-6 text-center">
-              <div className="font-bold text-primary">Kamaehu</div>
+              <div className="font-bold text-primary">Kamaehu Gym</div>
             </div>
             <div className="p-4 lg:p-6 text-center">
               <div className="font-medium text-foreground-muted text-sm">Generic Apps</div>
