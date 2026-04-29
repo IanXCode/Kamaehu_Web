@@ -1,27 +1,21 @@
-import Header from "@/components/Header";
-import Hero from "@/components/Hero";
-import AIFoodLog from "@/components/AIFoodLog";
-import WorkoutTracking from "@/components/WorkoutTracking";
-import Features from "@/components/Features";
-import ComparisonTable from "@/components/ComparisonTable";
-import BuiltByLifter from "@/components/BuiltByLifter";
-import Download from "@/components/Download";
-import Footer from "@/components/Footer";
+import { createClient } from "@/lib/supabase/server";
+import HomeClient from "@/components/HomeClient";
 
-export default function Home() {
-  return (
-    <>
-      <Header />
-      <main className="flex-1">
-        <Hero />
-        <AIFoodLog />
-        <WorkoutTracking />
-        <Features />
-        <ComparisonTable />
-        <BuiltByLifter />
-        <Download />
-      </main>
-      <Footer />
-    </>
-  );
+export default async function Home() {
+  const supabase = await createClient();
+
+  // Check auth server-side
+  const { data: { user } } = await supabase.auth.getUser();
+
+  let profile = null;
+  if (user) {
+    const { data } = await supabase
+      .from('profiles')
+      .select('id, username, display_name, avatar_url, is_admin')
+      .eq('id', user.id)
+      .single();
+    profile = data;
+  }
+
+  return <HomeClient initialUser={user} initialProfile={profile} />;
 }

@@ -39,10 +39,12 @@ export async function updateSession(request: NextRequest) {
   } = await supabase.auth.getUser();
 
   // Protected routes - redirect to sign-in if not authenticated
-  if (
-    !user &&
-    request.nextUrl.pathname.startsWith('/account')
-  ) {
+  const protectedPaths = ['/account', '/settings', '/feed', '/admin'];
+  const isProtectedPath = protectedPaths.some(path =>
+    request.nextUrl.pathname === path || request.nextUrl.pathname.startsWith(path + '/')
+  );
+
+  if (!user && isProtectedPath) {
     const url = request.nextUrl.clone();
     url.pathname = '/sign-in';
     url.searchParams.set('redirect', request.nextUrl.pathname);
